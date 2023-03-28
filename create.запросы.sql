@@ -6,7 +6,6 @@ create table if not exists Genre(
 create table if not exists Executor(
 	Executor_id SERIAL primary key,
 	Executor_name VARCHAR(80),
-	Genre_id INTEGER references Genre(Genre_Id)
 );
 
 create table if not exists Genre_executor (
@@ -19,7 +18,6 @@ create table if not exists Album (
 	Album_id SERIAL primary  key,
 	Album_name VARCHAR(60),
 	production_year INTEGER,
-	Executor_id INTEGER references Executor(Executor_id)
 );
 
 create table if not exists Album_executor (
