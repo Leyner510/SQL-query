@@ -1,26 +1,26 @@
 insert into executor
-values (1, 'Grigory Leps', 4)
+values (1, 'Grigory Leps')
 
 insert into executor
-values (2, 'Olga Buzova', 1)
+values (2, 'Olga Buzova')
 
 insert into executor
-values (3, 'Valery Meladze', 3)
+values (3, 'Valery Meladze')
 
 insert into executor
-values (4, 'Egor Creed', 2)
+values (4, 'Egor Creed')
 
 insert into executor
-values (5, 'Alla Pugacheva', 3)
+values (5, 'Alla Pugacheva')
 
 insert into executor
-values (6, 'Viktor Tsoi', 1)
+values (6, 'Viktor Tsoi')
 
 insert into executor
-values (7, 'Instasamka', 2)
+values (7, 'Instasamka')
 
 insert into executor
-values (8, '163onmyneck163', 5)
+values (8, '163onmyneck163')
 
 insert into genre
 values (1, 'pop')
@@ -62,7 +62,7 @@ insert into album
 values (8, 'POPSTAR', 2022)
 
 insert into track
-values (1, 'POPSTAR', 139, 8)
+values (1, 'Как mommy', 139, 8)
 
 insert into track
 values (2, 'Хуракан', 134, 5)
@@ -123,11 +123,93 @@ values (4, 'Свадьба', 2015)
 insert into collection
 values (5, 'Лезгинка', 2020)
 
-insert into collection
-values (6, 'Полный вперед!', 2019)
 
-insert into collection
-values (7, 'Вайб', 2022)
+insert into track_collection 
+values (1, 4)
 
-insert into collection
-values (8, 'Вальс', 2023)
+insert into track_collection 
+values (2, 2)
+
+insert into track_collection 
+values (3, 5)
+
+insert into track_collection 
+values (4, 1)
+
+insert into track_collection 
+values (5, 3)
+
+insert into track_collection  
+values (6, 2)
+
+insert into track_collection  
+values (7, 1)
+
+insert into track_collection  
+values (8, 4)
+
+insert into track_collection 
+values (9, 2)
+
+insert into track_collection 
+values (10, 5)
+
+insert into track_collection  
+values (11, 4)
+
+insert into track_collection 
+values (12, 2)
+
+insert into track_collection 
+values (13, 1)
+
+insert into track_collection 
+values (14, 2)
+
+insert into track_collection 
+values (15, 3)
+
+insert into genre_executor
+values (3, 1)
+
+insert into genre_executor
+values (1, 2)
+
+insert into genre_executor
+values (3, 3)
+
+insert into genre_executor
+values (2, 4)
+
+insert into genre_executor
+values (3, 5)
+
+insert into genre_executor
+values (4, 6)
+
+insert into genre_executor
+values (2, 7)
+
+insert into genre_executor
+values (5, 8)
+
+insert into album_executor
+values (2, 6)
+
+insert into album_executor
+values (3, 4)
+
+insert into album_executor
+values (4, 1)
+
+insert into album_executor
+values (5, 4)
+
+insert into album_executor
+values (6, 2)
+
+insert into album_executor
+values (7, 5)
+
+insert into album_executor
+values (8, 7)

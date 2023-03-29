@@ -31,12 +31,11 @@ left join executor e on ae.executor_id = e.executor_id
 where e.executor_name like '%Olga%'
 
 --6
-SELECT DISTINCT a.album_name AS album, count(ge.genre_id), ge.executor_id FROM genre_executor ge 
+SELECT DISTINCT a.album_name AS album FROM genre_executor ge 
 JOIN executor e  ON ge.executor_id  = e.executor_id
 JOIN album_executor ae  ON e.executor_id = ae.executor_id
-JOIN album a ON ae.album_id = ae.album_id
-GROUP BY e.executor_name, ge.executor_id, a.album_id 
-HAVING count(ge.genre_id) > 1;
+JOIN album a ON ae.album_id = a.album_id
+GROUP BY a.album_id 
 
 --7
 SELECT t.track_name FROM track t 
@@ -50,19 +49,15 @@ JOIN executor e  ON ae.album_id = e.executor_id
 WHERE duration = (SELECT MIN(duration) FROM track);
 --9
 
-select a.album_name
-from album as a
+select a.album_name from album as a
 left join track as t on t.album_id = a.album_id
-where t.album_id in (
-    select album_id
-    from track
-    group by album_id
-    having count(album_id) = (
-        select count(album_id)
-        from track
-        group by album_id
-        order by count
-        limit 1
-    )
-)
+group by a.album_name
+having count(track_id) = (
+	select count(track_id) from track
+	group by album_id 
+	order by 1
+	limit 1
+);
+
+
 
