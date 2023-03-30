@@ -31,11 +31,13 @@ left join executor e on ae.executor_id = e.executor_id
 where e.executor_name like '%Olga%'
 
 --6
-SELECT DISTINCT a.album_name AS album FROM genre_executor ge 
+SELECT DISTINCT a.album_name AS album FROM genre_executor ge
 JOIN executor e  ON ge.executor_id  = e.executor_id
 JOIN album_executor ae  ON e.executor_id = ae.executor_id
 JOIN album a ON ae.album_id = a.album_id
-GROUP BY a.album_id 
+GROUP BY album_name, ge.executor_id 
+having count(ge.genre_id) > 1;
+
 
 --7
 SELECT t.track_name FROM track t 
